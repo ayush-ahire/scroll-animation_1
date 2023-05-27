@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 36px;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    width: 400px;
+    background-color: aqua;
+    margin: 10px;
+    border-radius: 15px;
+    transform: translateX(400%);
+    transition: transform 1s ease;
+}
+
+.box:nth-last-of-type(even){
+    transform: translateX(-400%);
+    transition: transform 1s ease;
+
+}
+
+.box.show{
+    transform: translateX(0);
+}
